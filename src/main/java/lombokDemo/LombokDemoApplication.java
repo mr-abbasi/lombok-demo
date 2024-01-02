@@ -7,14 +7,9 @@ import java.net.URL;
 
 public class LombokDemoApplication {
     public static void main(String[] args) throws MalformedURLException {
-        var movie = new Movie();
-        movie.setTitle("The Lord of the Rings: The Fellowship of the Ring");
-        movie.setDescription("In the second age of Middle-earth, the lords of Elves ...");
-        movie.setCountry("New zealand - United States");
-        movie.setLanguage("English");
-        movie.setRating(8);
-        movie.setOfficialSite(new URL("https://lordoftherings.com"));
-        movie.setId(1L);
+        var movie = new Movie(1L,"The Lord of the Rings: The Fellowship of the Ring",
+                "In the second age of Middle-earth, the lords of Elves ...","New zealand - United States",
+                8,new URL("https://lordoftherings.com"),"English");
         System.out.println(movie);
     }
 }

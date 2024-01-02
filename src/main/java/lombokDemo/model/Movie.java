@@ -1,14 +1,15 @@
 package lombokDemo.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.net.URL;
 
 @Getter @Setter
 @ToString(exclude = "id")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Movie {
+
     private long id;
     private String title;
     private String description;
