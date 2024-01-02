@@ -10,6 +10,8 @@ import java.net.URL;
 @NoArgsConstructor
 public class Movie {
 
+    @Setter(AccessLevel.PRIVATE)
+    @Getter(AccessLevel.PRIVATE)
     private long id;
     private String title;
     private String description;
