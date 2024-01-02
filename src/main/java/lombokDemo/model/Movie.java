@@ -8,6 +8,7 @@ import java.net.URL;
 @ToString(exclude = "id")
 @AllArgsConstructor
 @RequiredArgsConstructor
+@EqualsAndHashCode
 public class Movie {
 
 //    @Setter(AccessLevel.PRIVATE)
