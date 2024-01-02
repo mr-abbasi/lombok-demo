@@ -10,11 +10,11 @@ import java.net.URL;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @EqualsAndHashCode
+@Builder
 public class Movie {
 
 //    @Setter(AccessLevel.PRIVATE)
 //    @Getter(AccessLevel.PRIVATE)
-    @NonNull
     private long id;
     private String title;
     private String description;
@@ -23,6 +23,8 @@ public class Movie {
     private URL officialSite;
     private String language;
 
+    @Builder.Default
+    private final int minutes = 12;
     public long addMinutes(@NonNull long minutes){
         return minutes + 60;
     }
