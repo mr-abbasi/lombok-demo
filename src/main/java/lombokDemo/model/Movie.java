@@ -7,12 +7,13 @@ import java.net.URL;
 @Getter @Setter
 @ToString(exclude = "id")
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class Movie {
 
-    @Setter(AccessLevel.PRIVATE)
-    @Getter(AccessLevel.PRIVATE)
-    private long id;
+//    @Setter(AccessLevel.PRIVATE)
+//    @Getter(AccessLevel.PRIVATE)
+
+    private final long id;
     private String title;
     private String description;
     private String country;
