@@ -18,6 +18,7 @@ public class LombokDemoApplication {
         System.out.println(movie.equals(secondMovie));
         var thirdMovie = movie;
         System.out.println(movie.equals(thirdMovie));
+        movie.addMinutes(20);
 
     }
 }
