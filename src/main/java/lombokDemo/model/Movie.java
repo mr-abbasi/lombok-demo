@@ -1,9 +1,9 @@
 package lombokDemo.model;
 
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import java.net.URL;
+import java.util.List;
 
 @Getter @Setter
 @ToString(exclude = "id")
@@ -23,7 +23,8 @@ public class Movie {
     private URL officialSite;
     private String language;
 
-    @Builder.Default
+    @Singular
+    private List<String> casts;
     private final int minutes = 12;
     public long addMinutes(@NonNull long minutes){
         return minutes + 60;
